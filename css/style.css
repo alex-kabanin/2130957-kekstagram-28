@@ -516,7 +516,7 @@ main {
   background-color: #ffffff;
 }
 
-.img-upload__preview img {
+.img-upload__source {
   display: block;
   max-width: 600px;
   max-height: 600px;
@@ -643,27 +643,32 @@ main {
   outline: auto 5px highlight;
 }
 
-.effects__preview--chrome {
+.effects__preview--chrome,
+.img-upload__source--chrome {
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
 }
 
-.effects__preview--sepia {
+.effects__preview--sepia,
+.img-upload__source--sepia {
   -webkit-filter: sepia(1);
           filter: sepia(1);
 }
 
-.effects__preview--marvin {
+.effects__preview--marvin,
+.img-upload__source--marvin {
   -webkit-filter: invert(100%);
           filter: invert(100%);
 }
 
-.effects__preview--phobos {
+.effects__preview--phobos,
+.img-upload__source--phobos {
   -webkit-filter: blur(3px);
           filter: blur(3px);
 }
 
-.effects__preview--heat {
+.effects__preview--heat,
+.img-upload__source--heat {
   -webkit-filter: brightness(3);
           filter: brightness(3);
 }

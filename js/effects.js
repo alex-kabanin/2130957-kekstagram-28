@@ -41,8 +41,11 @@ const switchSlider = (array) => {
 
 //Функция, удаляющая классы для изображения
 const removeClasses = () => {
-  const currentClass = CLASSES.find((imgClass) => imgClass === imgUploadPreview.classList.toString());
-  imgUploadPreview.classList.remove(currentClass);
+  CLASSES.forEach((imgClass) => {
+    if (imgUploadPreview.classList.contains(imgClass)) {
+      imgUploadPreview.classList.remove(imgClass);
+    }
+  });
 };
 
 //Функция, меняющая эффекты
@@ -55,10 +58,10 @@ const changeEffect = (effect) => {
     if (effect.value !== 'none') {
       sliderContainer.classList.remove('hidden');
       imgUploadPreview.style.filter = `${style}(${currentValue}${unit})`;
-      imgUploadPreview.classList.add(`effects__preview--${value}`);
+      imgUploadPreview.classList.add(`img-upload__source--${value}`);
     } else {
       sliderContainer.classList.add('hidden');
-      imgUploadPreview.classList.add(`effects__preview--${value}`);
+      imgUploadPreview.classList.add(`img-upload__source--${value}`);
       imgUploadPreview.style.filter = 'none';
     }
   });
@@ -85,7 +88,7 @@ const resetEffect = () => {
   sliderContainer.classList.add('hidden');
   effectLevelValue.value = 0;
   removeClasses();
-  imgUploadPreview.classList.add('effects__preview--none');
+  imgUploadPreview.classList.add('img-upload__source--none');
 };
 
 export {resetEffect};
