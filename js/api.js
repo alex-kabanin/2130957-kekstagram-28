@@ -1,7 +1,7 @@
-const BASE_URL = 'https://28.javascript.pages.academy/kekstagram';
+const BASE_URL = 'https://';
 const Route = {
-  GET_DATA: '/data',
-  SEND_DATA: '/',
+  GET_DATA: 'alex-kabanin.github.io/2130957-kekstagram-28/data/data.json',
+  SEND_DATA: '28.javascript.pages.academy/kekstagram/',
 };
 const Method = {
   GET: 'GET',
