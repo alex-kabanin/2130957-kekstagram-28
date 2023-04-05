@@ -1432,16 +1432,6 @@ main {
 }
 
 @media (max-width: 767px) {
-  .img-upload__source {
-    max-width: 100%;
-  }
-
-  .img-upload__preview {
-    width: 100%;
-    height: auto;
-    max-height: 600px;
-  }
-
   .effect-level {
     width: 85%;
   }
@@ -1455,6 +1445,25 @@ main {
     height: 100%;
   }
 
+}
+
+@media (max-width: 600px) {
+  .img-upload__source {
+    width: 100%;
+    position: relative;
+  }
+
+  .img-upload__preview {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+  }
+
+  .img-upload__preview:before {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
 }
 
 @media (max-width: 450px) {
