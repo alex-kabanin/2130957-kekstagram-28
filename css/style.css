@@ -47,7 +47,8 @@ main {
 }
 
 .container {
-  width: 1360px;
+  min-width: 1360px;
+  max-width: 1360px;
   margin: 0 auto;
 }
 
@@ -285,7 +286,8 @@ main {
 .img-upload__wrapper {
   margin: 0 auto;
   padding-bottom: 60px;
-  width: 582px;
+  min-width: 582px;
+  max-width: 582px;
 
   text-align: center;
 }
@@ -320,7 +322,8 @@ main {
   position: absolute;
 
   top: 194px;
-  left: 203px;
+  left: 50%;
+  transform: translateX(-48.5%);
 
   width: 180px;
   height: 181px;
@@ -1350,7 +1353,8 @@ main {
 
 @media (min-width: 1024px) and (max-width: 1359px) {
   .container {
-    width: 980px;
+    min-width: 980px;
+    max-width: 1359px;
   }
 
   .pictures {
@@ -1369,9 +1373,50 @@ main {
   }
 }
 
-@media (min-width: 0) and (max-width: 1023px) {
+@media (max-width: 1023px) {
   .container {
-    width: 600px;
+    min-width: 320px;
+    max-width: 1023px;
+  }
+
+  .img-upload__wrapper {
+    min-width: 320px;
+    max-width: 1023px;
+  }
+
+  .social__header {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .big-picture__preview {
+    min-width: 97%;
+  }
+
+  .big-picture__cancel {
+    top: -50px;
+    right: 0;
+    left: auto;
+  }
+
+  .img-upload__cancel {
+    top: -48px;
+    right: 8px;
+    left: auto;
+  }
+
+  .img-upload__preview {
+    margin: 0 auto;
+  }
+
+  .big-picture__img img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .img-filters__button {
+    padding: 5px 9px;
+    font-size: 14px;
   }
 
   .pictures {
@@ -1387,6 +1432,45 @@ main {
     -ms-grid-row: 1;
     -ms-grid-row-span: 3;
     grid-row: 1 / span 3;
+  }
+}
+
+@media (max-width: 768px) {
+  .img-upload__source {
+    max-width: 100%;
+  }
+
+  .img-upload__preview {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+  }
+
+  .effect-level {
+    width: 90%;
+  }
+}
+
+@media (max-width: 450px) {
+  .effects__preview {
+    width: 100%;
+    height: 100%;
+  }
+
+  .effects__label {
+    font-size: 11px;
+  }
+
+  .text__hashtags {
+    width: 100%;
+  }
+
+  .text__description {
+    width: 100%;
+  }
+
+  .effects__item {
+    width: calc(100% / 6);
   }
 }
 
