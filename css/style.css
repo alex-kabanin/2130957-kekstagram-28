@@ -363,6 +363,8 @@ main {
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
           transform: scale(1.1);
+
+  transition: all .2s ease-in-out;
 }
 
 .img-upload__input:focus + .img-upload__label {
