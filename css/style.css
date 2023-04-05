@@ -353,6 +353,7 @@ main {
 
   -webkit-filter: drop-shadow(0 0 10px #943106);
           filter: drop-shadow(0 0 10px #943106);
+  transition: all .2s ease-in-out;
 }
 
 .img-upload__label:hover::after,
@@ -364,7 +365,7 @@ main {
       -ms-transform: scale(1.1);
           transform: scale(1.1);
 
-  transition: all .2s ease-in-out;
+
 }
 
 .img-upload__input:focus + .img-upload__label {
@@ -1412,11 +1413,6 @@ main {
     margin: 0 auto;
   }
 
-  .img-filters__button {
-    padding: 5px 9px;
-    font-size: 14px;
-  }
-
   .pictures {
     -ms-grid-columns: (1fr)[3];
     grid-template-columns: repeat(3, 1fr);
@@ -1434,6 +1430,11 @@ main {
 }
 
 @media (max-width: 767px) {
+  .img-filters__button {
+    padding: 5px 9px;
+    font-size: 14px;
+  }
+
   .social {
     width: 100%;
   }
