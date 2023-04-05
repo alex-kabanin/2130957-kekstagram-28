@@ -1432,10 +1432,6 @@ main {
 }
 
 @media (max-width: 767px) {
-  .effect-level {
-    width: 85%;
-  }
-
   .social {
     width: 100%;
   }
@@ -1451,6 +1447,10 @@ main {
   .img-upload__source {
     width: 100%;
     position: relative;
+  }
+
+  .effect-level {
+    width: 85%;
   }
 
   .img-upload__preview {
